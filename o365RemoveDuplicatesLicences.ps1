@@ -1,5 +1,5 @@
-#$lastLoggedUser = (Get-Item -Path Registry::HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Authentication\LogonUI).GetValue("LastLoggedOnUser")
-#$lastLoggeeUserSamName = $lastLoggedUser.split("\")[1]
+# 参考URL
+# https://answers.microsoft.com/ja-jp/msoffice/forum/all/office-365/b56525f1-7a06-48b9-97f5-e32354a02552
 
 # Officeのプロセスの存在を確認し、存在する場合はスクリプトを終了する。
 $msOfficeCheck = (Get-Process).ProcessName | Select-String "POWERPNT|WINWORD|MSACCESS|EXCEL" -quiet
